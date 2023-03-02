@@ -76,15 +76,42 @@ body {
 .navbar .navbar-extra a {
   color: #fff;
   margin: 0 0.5rem;
+  font-size: 1.5rem;
 }
 
 .navbar .navbar-extra a:hover {
   color: var(--primary);
 }
 
+.masuk {
+  display: flex;
+}
+
+.masuk p {
+margin: 1rem;
+}
+
+.masuk button {
+  padding: 0.5rem;
+  background-color: var(--primary);
+  border-radius: 10px;
+  height: fit-content;
+  cursor: pointer;
+  border: 2px solid var(--primary);
+  transition: 0.4s;
+}
+
+.masuk button:hover {
+  background-color: var(--bg);
+  color: var(--primary);
+  font-size: bold;
+}
+
 #hamburger-menu {
   display: none;
 }
+
+/* Pop Up Login */
 
 /* Hero Section */
 .hero {
@@ -142,6 +169,13 @@ body {
   background-color: var(--primary);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  transition: 0.4s;
+  border: 1px solid var(--primary);
+}
+
+.hero .content .cta:hover {
+  background-color: #fff;
+  color: var(--bg);
 }
 
 /* About Section */
@@ -174,7 +208,8 @@ body {
 }
 
 .about .row .about-img img {
-  width: 100%;
+  width: 80%;
+  float: right;
 }
 
 .about .row .content {
@@ -182,9 +217,9 @@ body {
   padding: 0 1rem;
 }
 
-.about .row .about-img h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+.about .row .about-img h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .about .row .about-img p {
@@ -192,6 +227,66 @@ body {
   font-size: 1.4rem;
   font-weight: 100;
   line-height: 1.6;
+}
+
+.about .row .content h2 {
+  margin-bottom: 1px;
+}
+
+.about .row .content progress {
+  position: relative;
+  margin-top: 1rem;;
+  width: 100%;
+  height: 20px;
+  border: none;
+  background-color: #eee;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+progress::before {
+  content: "75%";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #fff;
+}
+
+.about .row .content progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.about .row .content progress::-webkit-progress-value {
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+.about .row .content progress::-moz-progress-bar {
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+.about .row .content .table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin-top: 1rem;
+}
+
+.about .row .content .table th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.about .row .content .table th {
+  background-color: var(--primary);
+}
+
+.about .row .content .table tr:hover {
+  background-color: var(--primary);
 }
 
 /* Menu Section */
@@ -227,10 +322,28 @@ body {
   border-radius: 50%;
   width: 150px;
   height: 150px;
+  cursor: pointer;
 }
 
 .menu .row .menu-card .menu-card-tittle {
   margin: 1rem auto 0.5rem;
+}
+
+.menu .row .ctb {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  border: 1px solid var(--primary);
+  transition: 0.4s;
+}
+
+.menu .row .ctb:hover {
+  background-color: var(--bg);
 }
 
 /* Contact Section */
@@ -277,11 +390,17 @@ body {
   color: #fff;
   background-color: var(--primary);
   cursor: pointer;
+  border: 1px solid var(--primary);
+  transition: 0.4s;
+}
+
+.contact .row form .btn:hover {
+  background-color: var(--bg);
 }
 
 /* Footer */
 footer {
-  background-color: var(--primary);
+  background: linear-gradient(to bottom, var(--bg), var(--primary));
   text-align: center;
   padding: 1rem 0 3rem;
   margin-top: 3rem;
@@ -294,11 +413,12 @@ footer .socials {
 footer .socials a {
   color: #fff;
   margin: 1rem;
+  font-size: 1.5rem;
 }
 
 footer .socials a:hover,
 footer .links a:hover {
-  color: var(--bg);
+  color: var(--primary);
 }
 
 footer .links {

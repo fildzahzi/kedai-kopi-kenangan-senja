@@ -1,0 +1,151 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+
+/* header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+
+.navbar-nav ul li {
+  float: left;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0.5rem;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.utama {
+  width: 35%;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border: 1px solid var(--primary);
+  border-radius: 2rem;
+}
+
+.utama h1 {
+  text-align: center;
+}
+
+.utama .row button {
+width: 30%;
+justify-content: center;
+margin: auto;
+margin-top: 1rem;
+}
+
+
+/* Footer */
+footer {
+  background: linear-gradient(to bottom, var(--bg), var(--primary));
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--primary);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+  text-decoration: none;
+}

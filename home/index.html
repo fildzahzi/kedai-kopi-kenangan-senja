@@ -11,10 +11,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
     rel="stylesheet">
-  <!-- Feather Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://kit.fontawesome.com/51ecf143e2.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="../img/coffee.ico">
   <!-- My Style -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../home/style.css">
 </head>
 
 <body>
@@ -26,24 +26,30 @@
     <div class="navbar-nav">
       <a href="#home">Home</a>
       <a href="#about">Tentang Kami</a>
-      <a href="#menu">Menu</a>
-      <a href="#contact">Kontak</a>
+      <a href="#menu">Menu Baru</a>
+      <a href="#contact">Kontak Kami</a>
+      <a href="../pesan/cobakeranjang.html" id="navpesansekarang" onclick="pesansekarangfunc()">Buat Pesanan</a>
+      <a href="../booking/booking.html" id="navbooking" onclick="bookingfunc()">Booking Tempat</a>
+    </div>
+    <div class="navbar-extra">
+      <a href="../login/login.html" id="show-login"><i class="fa-solid fa-right-to-bracket"></i></a>
+      <div class="masuk">
+        <p id="usermasuk">Hello <span id="username"></span></p>
+        <button id="logoutBtn">Logout</button>
+      </div>
+      <a href="#" id="hamburger-menu"><i class="fa-solid fa-bars"></i></i></a>
     </div>
 
-    <div class="navbar-extra">
-      <a href="#" id="search"><i data-feather="search"></i></a>
-      <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-    </div>
+
   </nav>
   <!-- Navbar End -->
 
   <!-- Hero Section Start -->
   <section class="hero" id="home">
     <main class="content">
-      <h1>Mari Nikmati Secangkir<span> Kopi</span></h1>
+      <h1>Seduh Kopimu, Sudahi<span> Sedihmu</span></h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ipsa iste, Cumque!</p>
-      <a href="#" class="cta">Beli Sekarang</a>
+      <a href="../pesan/cobakeranjang.html" class="cta" onclick="myFunction()" id="pesansekarang">Pesan Sekarang</a>
     </main>
   </section>
   <!-- Hero Section End -->
@@ -53,13 +59,41 @@
     <h2><span>Tentang</span> Kami</h2>
     <div class="row">
       <div class="about-img">
-        <img src="img/kedua.jpg" alt="Tentang Kami">
+        <img src="../img/kedua.jpg" alt="Tentang Kami">
       </div>
       <div class="content">
-        <h3>Kenapa memilih kami ?</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde harum nihil beatae. Facilis, culpa ipsam.</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo amet consequuntur et omnis consequatur
-          impedit rem ex ducimus eligendi commodi?</p>
+        <h2>Kenapa memilih kami ?</h2>
+        <p>75% dari costumer kami menyatakan bahwa citarasa produk kami autentik.</p>
+        <progress value="50" max="100"></progress>
+        <p>Bahan baku yang kami gunakan di import dari penghasil kopi terbaik di indonesia.</p>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Jenis Biji Kopi</th>
+                <th>Nama</th>
+                <th>Asal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Arabica</td>
+                <td>Kopi Aceh Gayo</td>
+                <td>Aceh</td>
+              </tr>
+              <tr>
+                <td>Robusta</td>
+                <td>Kopi Toraja</td>
+                <td>Toraja</td>
+              </tr>
+              <tr>
+                <td>Arabica</td>
+                <td>Kopi Bali Kinatami</td>
+                <td>Bali</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
@@ -67,36 +101,39 @@
 
   <!-- Menu Section Start -->
   <section id="menu" class="menu">
-    <h2><span>Menu</span> Kami</h2>
+    <h2><span>Menu Ba</span>ru Kami</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam impedit a deserunt, blanditiis laboriosam
       corrupti!</p>
 
     <div class="row">
       <div class="menu-card">
-        <img src="img/menu/expresso.jpg" alt="Espresso" class="menu-card-image">
-        <h3 class="menu-card-tittle">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="../img/menu/matchalatte.png" alt="Espresso" class="menu-card-image">
+        <h3 class="menu-card-tittle">- Matchalatte -</h3>
+        <p class="menu-card-price">Lorem ipsum dolor sit.</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/expresso.jpg" alt="Espresso" class="menu-card-image">
-        <h3 class="menu-card-tittle">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="../img/menu/milesmatcha.jpg" alt="Espresso" class="menu-card-image">
+        <h3 class="menu-card-tittle">- Matcha Miles Creps -</h3>
+        <p class="menu-card-price">Lorem ipsum dolor sit.</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/expresso.jpg" alt="Espresso" class="menu-card-image">
-        <h3 class="menu-card-tittle">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="../img/menu/milesnutella.jpg" alt="Espresso" class="menu-card-image">
+        <h3 class="menu-card-tittle">- Nutella Miles Creps -</h3>
+        <p class="menu-card-price">Lorem ipsum dolor sit.</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/expresso.jpg" alt="Espresso" class="menu-card-image">
-        <h3 class="menu-card-tittle">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="../img/menu/milesoreo.jpg" alt="Espresso" class="menu-card-image">
+        <h3 class="menu-card-tittle">- Oreo Miles Creps -</h3>
+        <p class="menu-card-price">Lorem ipsum dolor sit.</p>
       </div>
       <div class="menu-card">
-        <img src="img/menu/expresso.jpg" alt="Espresso" class="menu-card-image">
-        <h3 class="menu-card-tittle">- Espresso -</h3>
-        <p class="menu-card-price">IDR 15K</p>
+        <img src="../img/menu/redvelvedlatte.jpg" alt="Espresso" class="menu-card-image">
+        <h3 class="menu-card-tittle">- Red Velved Latte -</h3>
+        <p class="menu-card-price">Lorem ipsum dolor sit.</p>
       </div>
+
+      <a href="../masukkangambar/gambar.html" class="ctb">Beri Kami Rekomendasi Menu</a>
+
     </div>
   </section>
   <!-- Menu Section End -->
@@ -134,9 +171,9 @@
   <!-- Footer Start -->
   <footer>
     <div class="socials">
-      <a href="#"><i data-feather="instagram"></i></a>
-      <a href="#"><i data-feather="twitter"></i></a>
-      <a href="#"><i data-feather="facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
     </div>
 
     <div class="links">
@@ -152,12 +189,10 @@
   </footer>
   <!-- Footer End -->
 
-  <!-- Feather Icons -->
-  <script>
-    feather.replace()
-  </script>
+
   <!-- My JavaScript -->
-  <script src="js/script.js"></script>
+  <script src="../home/script.js"></script>
+
 </body>
 
 </html>
